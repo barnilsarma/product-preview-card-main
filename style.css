@@ -1,0 +1,70 @@
+body{
+    display:flex;flex-direction:column;align-items:center;
+    font-family: 'Montserrat', sans-serif;font-weight:500;
+    font-size:14px;background-color:hsl(30, 38%, 92%);
+}
+main{
+    display:flex;flex-direction:column;align-items:left;background-color:#ffffff;border-radius:0px 0px 10px 10px;
+    padding:20px 20px;
+}
+.Product-title{
+    color:hsl(228, 12%, 48%);text-transform:uppercase;font-size:14px;letter-spacing:3px;
+}
+.Product-name{
+    color:hsl(212, 21%, 14%);font-weight:700;font-family: 'Fraunces', serif;
+    font-size:30px;
+}
+.Product-description{
+    color:hsl(228, 12%, 48%);word-spacing:4px;letter-spacing:1px;
+}
+.Product-Prices{
+    display:flex;flex-direction: row;justify-content:left;align-items:center;
+}
+
+.Product-Prices #discounted{
+    color:hsl(158, 36%, 37%);font-weight:700;font-size:30px;
+    font-family:'Fraunces', serif;
+}
+.Product-Prices #actual{
+    color:hsl(228, 12%, 48%);position:relative;right:-20px;
+    text-decoration:line-through;
+}
+#product-pic{
+    height:300px;width:100%;border-radius:10px 10px 0px 0px;visibility: visible;
+}
+#product-pic-desktop{
+    visibility: hidden;position:absolute;height: 0px;width:0px;
+}
+#content{
+    display:flex;flex-direction:column;
+    margin-left:40px;margin-right:40px;
+}
+#add-to-btn{
+    background-color:hsl(158, 36%, 37%);
+    text-align:center;color:#ffffff;text-decoration:none;
+    border-radius:10px;padding:15px;font-weight:700;
+    word-spacing:5x;letter-spacing:1px;transition-duration:0.5s;
+}
+#add-to-btn:hover{
+    background-color:hsl(158, 36%, 25%);transition-duration:0.5s;
+}
+#cart{
+    position:relative;left:-12px;
+}
+@media only screen and (min-width:800px){
+    #content{
+        flex-direction:row;justify-content:space-between;
+    }
+    #product-pic-desktop{
+        visibility:visible;
+        border-radius:10px 0px 0px 10px;margin-top:100px;
+        margin-left:-350px;height:440px;width:350px;
+    }
+    #product-pic{
+        visibility:hidden;position:absolute;height:0px;width:0px;
+    }
+    main{
+        border-radius:0px 10px 10px 0px;margin-top:100px;
+        margin-right:-400px;height:400px;width:300px;     
+    }
+}
